@@ -8,11 +8,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_menu"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconSize="38dp"
 
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:backgroundTint="@color/purple_700"
+        app:itemIconSize="38dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +23,27 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_spending"
+        android:text="@string/add_transaction"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+
+        app:backgroundTint="@color/purple_700"
+        app:icon="@drawable/add_circle_48px"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942"
+        app:pressedTranslationZ="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
