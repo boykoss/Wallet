@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //semen_lovihui
-        //hjmhfmhc
+        //hjmhfmhc n nvnv n
     }
 }
