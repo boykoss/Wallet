@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.buttonToRegister.setOnClickListener{
+            val intent = Intent(this, LogIn_Register_Activity::class.java)
+            startActivity(intent)
+        }
+
 
 
 
