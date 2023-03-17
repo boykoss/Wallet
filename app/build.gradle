@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+
     //Firebase Authentication
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
 

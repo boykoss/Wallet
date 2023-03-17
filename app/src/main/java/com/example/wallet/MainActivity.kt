@@ -4,9 +4,13 @@ package com.example.wallet
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.wallet.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,23 +21,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.buttonMyWallets.setOnClickListener{
-            val intent = Intent(this, MyWallets_Activity::class.java)
-            startActivity(intent)
-        }
-
-        binding.buttonToRegister.setOnClickListener{
+        binding.buttonToRegister.setOnClickListener {
             val intent = Intent(this, LogIn_Register_Activity::class.java)
             startActivity(intent)
         }
 
+        //MENU
+        fun intentpass(){
+            val intent = Intent(this, AddOrEditWallet_Activity::class.java)
+            startActivity(intent)
+        }
 
+        findViewById<BottomNavigationView>(R.id.bottom_menu).setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.wallets_page->intentpass()
+            }
+            true
+        }
 
-
+    }
     }
 
 
 
 
-}
+
+

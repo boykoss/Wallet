@@ -4,39 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mainlay"
     tools:context=".AddOrEditWallet_Activity">
-    <!--edit text for note title-->
+
+
     <EditText
         android:id="@+id/idEdtNoteName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter wallet title"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/idSaveOrEditBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainlay"
+        app:layout_constraintBaseline_toTopOf="@+id/mainlay"
+        app:layout_constraintEnd_toEndOf="@+id/mainlay"
+        app:layout_constraintStart_toStartOf="@+id/mainlay"
 
-    <!--edit text for note description-->
-    <!--button for saving and updating a note-->
+        android:minHeight="48dp"
+         />
 
     <EditText
         android:id="@+id/idEdtNoteDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtNoteName"
-        android:layout_margin="10dp"
         android:gravity="start|top"
         android:hint="Enter your Note Details"
+        app:layout_constraintBottom_toBottomOf="@+id/idEdtNoteName"
+        app:layout_constraintBaseline_toTopOf="@+id/idEdtNoteName"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtNoteName"
+        app:layout_constraintStart_toStartOf="@+id/idEdtNoteName"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:singleLine="false"
-        app:layout_constraintBottom_toTopOf="@+id/idSaveOrEditBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idEdtNoteName"
-        app:layout_constraintVertical_bias="0.439" />
+        android:singleLine="false" />
 
     <Button
         android:id="@+id/idSaveOrEditBtn"
@@ -46,9 +44,15 @@
         android:text="Done"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottom_activity"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-38dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
